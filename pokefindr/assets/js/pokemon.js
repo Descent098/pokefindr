@@ -5,8 +5,6 @@ async function getPokemon(id=""){
         id = parameters.get('id');
     }
     
-    
-    
     pokemonData = {
         name:"",
         image:"",
@@ -19,7 +17,7 @@ async function getPokemon(id=""){
       .then((response) => response.json())
           .then((data) => {
         
-            pokemonData.description = data.flavor_text_entries[0].flavor_text.toString().replace(""," ")
+            pokemonData.description = data.flavor_text_entries[0].flavor_text.toString()
             
           }
         )
